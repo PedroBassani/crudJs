@@ -1,1 +1,1 @@
-https://www.youtube.com/watch?v=_HEIqE_qqbQ&ab_channel=FernandoLeonid <- 50min
+Projeto desenvolvido voltado para estudos da linguagem JavaScrip

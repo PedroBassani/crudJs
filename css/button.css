@@ -7,18 +7,20 @@
     font-size: 1rem;
     cursor: pointer;
     transition: box-shadow .6s ease;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
 .button.blue{
-    background-color: #1FB6FF;
+    background-color: #4f31b9;
 }
 
 button.green{
-    background-color: #13CE66;
+    background-color: #31b94f;
 }
 
 button.red{
-    background-color: #FF4949;
+    background-color: #b94f31;
 }
 
 .button:hover{

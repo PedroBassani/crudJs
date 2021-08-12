@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/records.css">
     <link rel="stylesheet" href="css/modal.css">
-    <script src="main.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/validator.js" defer></script>
     <title>CRUD</title>
 </head>
 <body>
@@ -18,61 +19,33 @@
         <h1 class="header-title">Cadastro de Clientes</h1>
     </header>
     <main>
-        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <button type="button" class="button blue mobile " id="cadastrarCliente">Cadastrar Cliente</button>
         <table id="tbclient" class="records">
             <thead>
                 <tr>
                     <th>Nome</th>
                     <th>E-mail</th>
                     <th>Celular</th>
-                    <th>Cidade</th>
+                    <th>CPF</th>
+                    <th>Foto</th>
                     <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
-                <!--<tr>
-                    <td>Maria</td>
-                    <td>maria@gmail.com</td>
-                    <td>(11) 97165-1111</td>
-                    <td>Anapolis</td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>João Pedro</td>
-                    <td>joao@gmail.com</td>
-                    <td>(11) 97165-2222</td>
-                    <td>Jandira</td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jose da Silva</td>
-                    <td>jose@gmail.com</td>
-                    <td>(11) 97165-3333</td>
-                    <td>São Roque</td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>-->
+                
             </tbody>
         </table>
         <div class="modal" id="modal">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h2>Novo Cliente</h2>
+                    <h2 class="header-title-modal">Novo Cliente</h2>
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
                 <form id="form" class="modal-form">
-                    <input id="nome" type="text" data-index='new' class="modal-field" placeholder="Nome do Cliente" required>
-                    <input id="email" type="email" class="modal-field" placeholder="e-mail do Cliente" required>
-                    <input id="celular" type="text" class="modal-field" placeholder="Celular do Cliente" required>
-                    <input id="cidade" type="text" class="modal-field" placeholder="Cidade do Cliente" required>
+                    <input id="nome" type="text" data-index='new' class="modal-field" placeholder="Fulano de Tal" required>
+                    <input id="email" type="email" class="modal-field" placeholder="email@email.com" required>
+                    <input id="celular" type="text" class="modal-field" placeholder="(99) 9999-9999" required>
+                    <input id="cpf" type="text" class="modal-field" placeholder="000.000.000-00" required>
                 </form>
                 <footer class="modal-footer">
                     <button id="salvar" class="button green">Salvar</button>
@@ -82,7 +55,7 @@
         </div>
     </main>
     <footer>
-        Copyright &copy; Prof. Fernando Leonid
+        
     </footer>
 </body>
 </html>
