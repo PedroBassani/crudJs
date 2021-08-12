@@ -5,7 +5,7 @@
 }
 
 :root{
-    --primary-color: #8a2be2;
+    --primary-color: #4f31b9;
     --secundary-color: #FFF1CC;
     --shadow-color: #CCC;
     --text-color: #FFF;
@@ -28,8 +28,13 @@ header{
 }
 
 .header-title{
-    color: black;
+    color: #f5f5f5;
     font-size: 2rem;
+}
+
+.header-title-modal{
+    color: #f5f5f5;
+    font-size: 1.5rem;
 }
 
 main{

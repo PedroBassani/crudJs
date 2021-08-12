@@ -8,7 +8,8 @@
     height: 50px;
     background-color: var(--primary-color);
     padding-left: 20px;
-    font-size: 1.2rem;    
+    font-size: 1.2rem;  
+    color: #f5f5f5;
 }
 .records td{
     height: 50px;
@@ -48,5 +49,9 @@
 
     .records tr:hover{
         background-color: inherit;
+    }
+
+    .records td img{
+        background-color: black;
     }
 }

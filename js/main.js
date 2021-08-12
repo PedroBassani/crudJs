@@ -1,9 +1,5 @@
 'use strict'
 
-function testelog() {
-    console.log("Oi" + tempClient.nome)
-}
-
 const openModal = () => document.getElementById('modal')
     .classList.add('active')
 
@@ -20,7 +16,7 @@ const createClient = (client) => {
     const dbClient = getDatabase()
     dbClient.push(client)
     setDatabase(dbClient)
-    console.log("Cliente " + JSON.stringify(client.nome) + " Adicionado" )
+    console.log(`Cliente ${JSON.stringify(client.nome)} Adicionado`)
 }
 
 // CRUD -> Read
@@ -40,9 +36,14 @@ const deletedClient = (index) => {
     setDatabase(dbClient)
 }
 
+// Validações
 const isValidFields = () => {
-    return document.getElementById('form').reportValidity()
-};
+    if(isValidPhone()){
+        if(isValidDocument()){
+            return document.getElementById('form').reportValidity()
+        }
+    }
+}
 
 const clearFields = () => {
     const fields = document.querySelectorAll('.modal-field')
@@ -56,7 +57,8 @@ const saveClient = () => {
             nome: document.getElementById('nome').value,
             email: document.getElementById('email').value,
             celular: document.getElementById('celular').value,
-            cidade: document.getElementById('cidade').value
+            cpf: document.getElementById('cpf').value,
+            foto: `https://robohash.org/${document.getElementById('email').value}?size=80x80`
         }
         const index = document.getElementById('nome').dataset.index
         if(index == 'new'){
@@ -79,7 +81,8 @@ const createRow = (client, index) => {
         <td>${client.nome}</td>
         <td>${client.email}</td>
         <td>${client.celular}</td>
-        <td>${client.cidade}</td>
+        <td>${client.cpf}</td>
+        <td><img src='${client.foto}'></td>
         <td>
             <button type="button" class="button green" id="edit-${index}">Editar</button>
             <button type="button" class="button red" id="delete-${index}">Excluir</button>
@@ -103,7 +106,7 @@ const fillFields = (client) => {
     document.getElementById('nome').value = client.nome
     document.getElementById('email').value = client.email
     document.getElementById('celular').value = client.celular
-    document.getElementById('cidade').value = client.cidade
+    document.getElementById('cpf').value = client.cpf
     document.getElementById('nome').dataset.index = client.index
 }
 
