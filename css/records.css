@@ -24,7 +24,7 @@
 }
 
 .records tr:hover{
-    background-color: var(--secundary-color);
+    background-color: #1F1F23;
 }
 
 @media(max-width:480px){
@@ -49,9 +49,5 @@
 
     .records tr:hover{
         background-color: inherit;
-    }
-
-    .records td img{
-        background-color: black;
     }
 }
