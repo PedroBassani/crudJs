@@ -16,11 +16,10 @@ const setUserDatabase = (dbUsers) => localStorage.setItem("db_user", JSON.string
 
 const readUsers = () => getUsersDatabase()
 
-const login = () => {
-    console.log('logando')
-    if(isUser(dataUser) && isPassword(dataUser)) {
-        return true
-        document.getElementById("entrar").onclick.value = "windown.location.href = 'index.html'" 
+const login = (event) => {
+    if(isUser(dataUser().user) && isPassword(dataUser().password)) {
+        event.preventDefault();
+        location.href = 'index.html';
     }
     else {
         alert('Usuário ou Senha incorreto')
@@ -45,7 +44,3 @@ const isPassword = (elemet) => {
     console.log(dataUser.password)
     return dataUser.password === elemet.password
 }
-
-//eventos
-document.getElementById('entrar')
-    .addEventListener('click', login)
