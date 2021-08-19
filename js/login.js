@@ -19,7 +19,7 @@ const readUsers = () => getUsersDatabase()
 const login = (event) => {
     if(isUser(dataUser().user) && isPassword(dataUser().password)) {
         event.preventDefault();
-        location.href = 'index.html';
+        location.href = 'home.html';
     }
     else {
         alert('Usuário ou Senha incorreto')
