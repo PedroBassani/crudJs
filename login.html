@@ -19,11 +19,11 @@
         <h1 class="header-title">Bem Vindo</h1>
     </header>
     <main>
-        <form class="box">
+        <form class="box" onsubmit="return login(event)">
             <h1>Entrar</h1>
             <input type="text" id="usuario" placeholder="Usuário" required>
             <input type="password" id="senha" placeholder="Senha" required>
-            <input type="submit" value="Entrar" id="entrar" onclick="window.location.href = 'index.html'">
+            <input type="submit" value="Entrar" id="entrar">
         </form>
     </main>
 </body>
